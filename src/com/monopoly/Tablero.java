@@ -20,7 +20,7 @@ public class Tablero {
 	
 	public void mostrarTablero() {
 		for (Casilla casilla:this.casillas) {
-			casilla.toString();
+			System.out.println(casilla.toString());
 		}
 	}
 }

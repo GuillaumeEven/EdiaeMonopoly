@@ -33,7 +33,7 @@ public abstract class Casilla {
 
 	@Override
 	public String toString() {
-		return "Casilla [nombre=" + nombre + ", tipo=" + tipo + "]";
+		return "Casilla [nombre=" + nombre + "]";
 	}
 	
 	
