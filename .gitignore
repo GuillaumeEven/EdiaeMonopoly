@@ -1,0 +1,131 @@
+  1  +  # Eclipse                                                                                                           │
+ │   2  +  .classpath                                                                                                          │
+ │   3  +  .project                                                                                                            │
+ │   4  +  .settings/                                                                                                          │
+ │   5  +  bin/                                                                                                                │
+ │   6  +  tmp/                                                                                                                │
+ │   7  +  *.tmp                                                                                                               │
+ │   8  +  *.bak                                                                                                               │
+ │   9  +  *.swp                                                                                                               │
+ │  10  +  *~.nib                                                                                                              │
+ │  11  +  local.properties                                                                                                    │
+ │  12  +  .loadpath                                                                                                           │
+ │  13  +  .recommenders                                                                                                       │
+ │  14  +  .metadata                                                                                                           │
+ │  15  +                                                                                                                      │
+ │  16  +  # External tool builders                                                                                            │
+ │  17  +  .externalToolBuilders/                                                                                              │
+ │  18  +                                                                                                                      │
+ │  19  +  # Locally stored "Eclipse launch configurations"                                                                    │
+ │  20  +  *.launch                                                                                                            │
+ │  21  +                                                                                                                      │
+ │  22  +  # PyDev specific (Python IDE for Eclipse)                                                                           │
+ │  23  +  .pydevproject                                                                                                       │
+ │  24  +                                                                                                                      │
+ │  25  +  # CDT-specific (C/C++ Development Tooling)                                                                          │
+ │  26  +  .cproject                                                                                                           │
+ │  27  +                                                                                                                      │
+ │  28  +  # CDT- autotools                                                                                                    │
+ │  29  +  .autotools                                                                                                          │
+ │  30  +                                                                                                                      │
+ │  31  +  # Java annotation processor (APT)                                                                                   │
+ │  32  +  .factorypath                                                                                                        │
+ │  33  +                                                                                                                      │
+ │  34  +  # PDT-specific (PHP Development Tools)                                                                              │
+ │  35  +  .buildpath                                                                                                          │
+ │  36  +                                                                                                                      │
+ │  37  +  # sbteclipse plugin                                                                                                 │
+ │  38  +  .target                                                                                                             │
+ │  39  +                                                                                                                      │
+ │  40  +  # Tern plugin                                                                                                       │
+ │  41  +  .tern-project                                                                                                       │
+ │  42  +                                                                                                                      │
+ │  43  +  # TeXlipse plugin                                                                                                   │
+ │  44  +  .texlipse                                                                                                           │
+ │  45  +                                                                                                                      │
+ │  46  +  # STS (Spring Tool Suite)                                                                                           │
+ │  47  +  .apt_generated                                                                                                      │
+ │  48  +  .apt_generated_test                                                                                                 │
+ │  49  +                                                                                                                      │
+ │  50  +  # Code Recommenders                                                                                                 │
+ │  51  +  .recommenders/                                                                                                      │
+ │  52  +                                                                                                                      │
+ │  53  +  # Scala IDE specific (Scala & Java development for Eclipse)                                                         │
+ │  54  +  .cache-main                                                                                                         │
+ │  55  +  .scala_dependencies                                                                                                 │
+ │  56  +  .worksheet                                                                                                          │
+ │  57  +                                                                                                                      │
+ │  58  +  # Compiled class files                                                                                              │
+ │  59  +  *.class                                                                                                             │
+ │  60  +                                                                                                                      │
+ │  61  +  # Log files                                                                                                         │
+ │  62  +  *.log                                                                                                               │
+ │  63  +                                                                                                                      │
+ │  64  +  # BlueJ files                                                                                                       │
+ │  65  +  *.ctxt                                                                                                              │
+ │  66  +                                                                                                                      │
+ │  67  +  # Mobile Tools for Java (J2ME)                                                                                      │
+ │  68  +  .mtj.tmp/                                                                                                           │
+ │  69  +                                                                                                                      │
+ │  70  +  # Package Files                                                                                                     │
+ │  71  +  *.jar                                                                                                               │
+ │  72  +  *.war                                                                                                               │
+ │  73  +  *.nar                                                                                                               │
+ │  74  +  *.ear                                                                                                               │
+ │  75  +  *.zip                                                                                                               │
+ │  76  +  *.tar.gz                                                                                                            │
+ │  77  +  *.rar                                                                                                               │
+ │  78  +                                                                                                                      │
+ │  79  +  # Virtual machine crash logs                                                                                        │
+ │  80  +  hs_err_pid*                                                                                                         │
+ │  81  +  replay_pid*                                                                                                         │
+ │  82  +                                                                                                                      │
+ │  83  +  # Maven                                                                                                             │
+ │  84  +  target/                                                                                                             │
+ │  85  +  pom.xml.tag                                                                                                         │
+ │  86  +  pom.xml.releaseBackup                                                                                               │
+ │  87  +  pom.xml.versionsBackup                                                                                              │
+ │  88  +  pom.xml.next                                                                                                        │
+ │  89  +  release.properties                                                                                                  │
+ │  90  +  dependency-reduced-pom.xml                                                                                          │
+ │  91  +  buildNumber.properties                                                                                              │
+ │  92  +  .mvn/timing.properties                                                                                              │
+ │  93  +  .mvn/wrapper/maven-wrapper.jar                                                                                      │
+ │  94  +                                                                                                                      │
+ │  95  +  # Gradle                                                                                                            │
+ │  96  +  .gradle                                                                                                             │
+ │  97  +  build/                                                                                                              │
+ │  98  +  !gradle/wrapper/gradle-wrapper.jar                                                                                  │
+ │  99  +  !**/src/main/**/build/                                                                                              │
+ │ 100  +  !**/src/test/**/build/                                                                                              │
+ │ 101  +                                                                                                                      │
+ │ 102  +  # IntelliJ IDEA (au cas où)                                                                                         │
+ │ 103  +  .idea/                                                                                                              │
+ │ 104  +  *.iws                                                                                                               │
+ │ 105  +  *.iml                                                                                                               │
+ │ 106  +  *.ipr                                                                                                               │
+ │ 107  +  out/                                                                                                                │
+ │ 108  +                                                                                                                      │
+ │ 109  +  # NetBeans (au cas où)                                                                                              │
+ │ 110  +  /nbproject/private/                                                                                                 │
+ │ 111  +  /nbbuild/                                                                                                           │
+ │ 112  +  /dist/                                                                                                              │
+ │ 113  +  /nbdist/                                                                                                            │
+ │ 114  +  /.nb-gradle/                                                                                                        │
+ │ 115  +                                                                                                                      │
+ │ 116  +  # VS Code (au cas où)                                                                                               │
+ │ 117  +  .vscode/                                                                                                            │
+ │ 118  +                                                                                                                      │
+ │ 119  +  # OS Files                                                                                                          │
+ │ 120  +  .DS_Store                                                                                                           │
+ │ 121  +  .DS_Store?                                                                                                          │
+ │ 122  +  ._*                                                                                                                 │
+ │ 123  +  .Spotlight-V100                                                                                                     │
+ │ 124  +  .Trashes                                                                                                            │
+ │ 125  +  ehthumbs.db                                                                                                         │
+ │ 126  +  Thumbs.db                                                                                                           │
+ │ 127  +                                                                                                                      │
+ │ 128  +  # JUnit test reports                                                                                                │
+ │ 129  +  test-output/                                                                                                        │
+ │ 130  +  junit/                                                                                                              │
+ │ 131  +                         
