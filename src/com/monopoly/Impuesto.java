@@ -5,7 +5,7 @@ public class Impuesto extends Casilla {
 	private int cantidad;
 
 	public Impuesto(String nombre, int cantidad) {
-		super();
+		super(nombre);
 		this.cantidad = cantidad;
 	}
 

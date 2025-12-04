@@ -7,8 +7,8 @@ public class Dado {
 	private int tirada;
 	private Random r;
 	
-	public Dado(int tirada, Random r) {
-		this.tirada = tirada;
+	public Dado() {
+		this.tirada = 0;
 		this.r = new Random();
 	}
 

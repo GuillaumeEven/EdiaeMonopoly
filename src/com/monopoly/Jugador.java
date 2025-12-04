@@ -1,7 +1,6 @@
 package com.monopoly;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Jugador {
 	
@@ -10,11 +9,11 @@ public class Jugador {
 	private int posicion;
 	private ArrayList<Propriedad> propriedades;
 	
-	public Jugador(String nombre, int dinero, int posicion, ArrayList<Propriedad> propriedades) {
+	public Jugador(String nombre) {
 		this.nombre = nombre;
-		this.dinero = dinero;
-		this.posicion = posicion;
-		this.propriedades = propriedades;
+		this.dinero = 10000;
+		this.posicion = 0;
+		this.propriedades = new ArrayList<>();
 	}
 	
 	public Jugador() {
@@ -75,7 +74,16 @@ public class Jugador {
 	@Override
 	public String toString() {
 		return "Jugador [nombre=" + nombre + ", dinero=" + dinero + ", posicion=" + posicion + ", propriedades="
-				+ Arrays.toString(propriedades) + "]";
+				+ this.propriedadesToString() + "]";
+	}
+	
+	public String propriedadesToString() {
+		String propriedades = "";
+		for (Propriedad propriedad:this.propriedades) {
+			propriedades += propriedad.toString();
+		}
+		
+		return propriedades;
 	}
 
 	

@@ -9,7 +9,8 @@ public class Propriedad extends Casilla {
 	private Jugador duenyo;
 	private Scanner sc;
 	
-	public Propriedad(int precio, int alquiler) {
+	public Propriedad(String nombre, int precio, int alquiler) {
+		super(nombre);
 		this.precio = precio;
 		this.alquiler = alquiler;
 	}
