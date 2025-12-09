@@ -73,8 +73,13 @@ public class Jugador {
 	
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", dinero=" + dinero + ", posicion=" + posicion + ", propriedades="
-				+ this.propriedadesToString() + "]";
+		String content = "╔════════════════╗\n";
+		content += Tools.ponEspacios(getNombre(), 15);
+		content += Tools.ponEspacios(("Dinero: " + getDinero()), dinero);
+		for (Propriedad propriedad: this.propriedades) {
+			content += propriedad.toString();
+		}
+		return content;
 	}
 	
 	public String propriedadesToString() {

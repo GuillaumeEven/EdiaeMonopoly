@@ -18,11 +18,16 @@ public class Tablero {
 		this.casillas = casillas;
 	}
 	
-	@Override
-	public String toString() {
+	public int getSize() {
+		// TODO: do something
+		return this.casillas.size();
+	}
+	
+	//FIXME: test of docstring
+	public String toString(ArrayList<Jugador> jugadores) {
 		String content = "";
 		for (int i = 0; i < this.casillas.size(); i++) {
-			Casilla casilla = this.casillas.get(i); 
+			Casilla casilla = this.casillas.get(i);
 			
 			if (i == 0) {
 				content += "╔══════════════════════════╗\n";
@@ -30,7 +35,7 @@ public class Tablero {
 				content += "╠══════════════════════════╣\n";
 			}
 			// display name
-			
+						
 			content += Tools.ponEspacios(casilla.getNombre(), 25);
 			
 			// display type and info
@@ -44,11 +49,22 @@ public class Tablero {
 					String oferta = "Precio: " + ((Propriedad) casilla).getPrecio();
 					content += Tools.ponEspacios(oferta, 25);
 				}
-			} else {
+			} else if (casilla instanceof Impuesto) {
 				content += Tools.ponEspacios("Impuesto", 25);
 				content += Tools.ponEspacios("A pagar !!!", 25);
 				String impuesto = "Nos debes " + ((Impuesto) casilla).getCantidad();
 				content += Tools.ponEspacios(impuesto, 25);
+			} else {
+				content += Tools.ponEspacios("Especial", 25);
+			}
+			
+			// display if a gamer is in the place
+						
+			for (int j = 0; j < jugadores.size(); j++) {
+				Jugador jugador = jugadores.get(j);
+				if (jugador.getPosicion() == i) {
+					content += Tools.ponEspacios(jugador.getNombre(), 25);
+				}
 			}
 			
 			if (i == this.casillas.size()-1) {

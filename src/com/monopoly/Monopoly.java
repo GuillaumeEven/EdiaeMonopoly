@@ -12,22 +12,100 @@ public class Monopoly {
 		
 		// inicializar tablero
 		Tablero tablero = initTablero();
+		
 		// inicializar dado
 		Dado dado = new Dado();
 		
-		// Display tablero
-		System.out.println(tablero.toString());
+		// inicializar los jugadores
+		Jugador haGanado = null;
+		ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 		
+		/*
+		 * Por descomentar
 		System.out.println("Cuantos jogadores sois ?");
 		int numeroJugadores = sc.nextInt();
+		*/
+		int numeroJugadores = 4;
+		
+		
+		
 		System.out.println("Genial, sois " + numeroJugadores + " jugadores.");
+		
+		/*
+		 * Por descomentar
+		
+		for (int i = 0; i < numeroJugadores; i++) {
+			String nombre = "";
+			System.out.println("Como se va a llamar el jugador " + (i + 1) + " ?");
+			nombre = sc.nextLine();
+			Jugador jugador = new Jugador(nombre);
+			jugadores.add(jugador);
+		}
+		
+		*/
+		
+		jugadores.add(new Jugador("Max"));
+		jugadores.add(new Jugador("Tim"));
+		jugadores.add(new Jugador("Ben"));
+		jugadores.add(new Jugador("Sam"));
+				
+		System.out.println("Vale, estos son los jugadores:");
+		
+		for (int i = 0; i < jugadores.size(); i++) {
+			System.out.println(jugadores.get(i).toString());
+		}
+		
+		// Display tablero
+		System.out.println(tablero.toString(jugadores));
+		
+		// Empezar los turnos
+		int leToca = 0;
+		while(haGanado == null) {
+			// Is this a new turn ?
+			if (leToca == (jugadores.size())) {
+				
+				System.out.println(tablero.toString(jugadores));
+				leToca = 0;
+			}
+			
+			Jugador actual = jugadores.get(leToca);
+			
+			System.out.println(actual.getNombre() + ", tu estado es:");
+			System.out.println(actual.toString());
+			System.out.println("Tecla para lanzar el dado !");
+			sc.nextLine();
+			int primeraTirada = dado.tirar();
+			int segundaTirada = dado.tirar();			
+			System.out.println("Has hecho un " + primeraTirada);
+			System.out.println("Y un " + segundaTirada);
+			boolean doble = primeraTirada == segundaTirada ? true : false;
+			
+			if (doble) {
+				System.out.println("Vaya ! Has hecho un doble ! Podras jugar dos veces !");
+			}
+			sc.nextLine();
+			
+			// Update the gamer's place
+			actual.mover((primeraTirada + segundaTirada), tablero.getSize());
+			sc.nextLine();
 
+			System.out.println("Te encuentras ahorra en " + tablero.getCasillas().get(actual.getPosicion()));
+
+
+			// finalizar el turno
+			leToca++;
+			
+		}
+		
+		System.out.println("You should NOT see this message");
+		
 		sc.close();
 	}
 	
 	public static Tablero initTablero() {
 		ArrayList<Casilla> casillas = new ArrayList<Casilla>();
 
+		casillas.add(new Especial("Salida"));
 		casillas.add(new Propriedad("Champs-Élysées", 400, 50));
 		casillas.add(new Propriedad("Montmartre", 280, 35));
 		casillas.add(new Propriedad("Le Marais", 300, 38));
